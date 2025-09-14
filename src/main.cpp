@@ -215,14 +215,7 @@ if (argc >= 3 && std::string(argv[2]) != "") {
 // If still empty, use the hardcoded defaults
 if (queries.empty()) {
     queries = {
-        {"Exact COUNT", "SELECT COUNT(value) FROM data"},
-        {"Approximate COUNT (10% sample)", "SELECT COUNT(value) FROM data SAMPLE 10%"},
-        {"Count GROUP BY", "SELECT category, COUNT(value) FROM data GROUP BY category"},
-        {"Stratified Sampling", "SELECT category, COUNT(value) FROM data GROUP BY category SAMPLE STRATIFIED BY category 20%"},
-        {"Group By with AVG", "SELECT category, AVG(value) FROM data GROUP BY category"},
-        {"Stratified Sampling AVG", "SELECT category, AVG(value) FROM data GROUP BY category SAMPLE STRATIFIED BY category 20%"},
-        {"Group By SUM", "SELECT category, SUM(value) FROM data GROUP BY category"},
-        {"Stratified Sampling SUM", "SELECT category, SUM(value) FROM data GROUP BY category SAMPLE STRATIFIED BY category 20%"},
+        
     };
 }
 
